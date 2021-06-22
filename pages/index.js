@@ -1,5 +1,5 @@
 import Head from 'next/head'
-
+import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import Navbar from '../components/navbar'
 import Footer from '../components/footer'
@@ -36,7 +36,7 @@ export default function Home() {
           </div>
 
           <div id={styles.coheteSection1}>
-            <img src='/Cohete.svg' alt='next' />
+            <Image src='/Cohete.svg' alt='next' layout='fixed' height={612} width={462} />
           </div>
         </section>
 
@@ -56,10 +56,10 @@ export default function Home() {
                 <div className={styles.boxSection1} id={styles.box1}>
                   <div className={styles.numberBox}>
                     01
-                </div>
+                  </div>
                   <div className={styles.titleBox}>
                     Automatización de procesos empresariales
-                </div>
+                  </div>
                 </div>
                 <div className={styles.boxSection1} id={styles.box2}>
                   <div className={styles.numberBox}>
@@ -93,10 +93,10 @@ export default function Home() {
             Pattern            
           */}
           <div className={styles.pattern1}>
-            <img src='/pattern1.svg' alt='next' />
+            <Image src='/pattern1.png' alt='next' layout='fixed' height={189} width={641} />
           </div>
           <div className={styles.pattern2}>
-            <img src='/pattern1.svg' alt='next' />
+            <Image src='/pattern1.png' alt='next' layout='fixed' height={189} width={641} />
           </div>
 
 
