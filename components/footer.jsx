@@ -1,12 +1,13 @@
 import styles from '../styles/Footer.module.css';
 import Link from 'next/Link';
+import Image from 'next/image'
 
 const Footer = () => {
     return (
         <footer className={styles.footer}>
             <div className={styles.innerFooter}>
                 <div className={styles.containerLogoFooter}>
-                    <img src="/logo.png" />
+                    <Image src="/Logo.png" layout='fixed' width='191px' height='77px' />
                 </div>
                 <div className={styles.containerSiteMap}>
                     <div className={styles.containerInnerSiteMap}>
@@ -14,11 +15,11 @@ const Footer = () => {
 
                         <ul>
                             <li>
-
-                                <a>
-                                    Mapa de sitio
-                            </a>
-
+                                <Link href="">
+                                    <a>
+                                        Mapa de sitio
+                                 </a>
+                                </Link>
                             </li>
                             <li>
                                 <Link href="/servicios">
@@ -44,11 +45,11 @@ const Footer = () => {
                         </ul>
                         <ul>
                             <li>
-
-                                <a>
-                                    Legal
-                            </a>
-
+                                <Link href="">
+                                    <a>
+                                        Legal
+                                    </a>
+                                </Link>
                             </li>
                             <li>
                                 <Link href="/servicios">
@@ -74,11 +75,11 @@ const Footer = () => {
                         </ul>
                         <ul>
                             <li>
-
-                                <a>
-                                    Redes sociales
-                            </a>
-
+                                <Link href="">
+                                    <a>
+                                        Redes sociales
+                                    </a>
+                                </Link>
                             </li>
                             <li>
                                 <Link href="/servicios">

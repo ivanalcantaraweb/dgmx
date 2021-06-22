@@ -3,6 +3,7 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import Navbar from '../components/navbar'
 import Footer from '../components/footer'
+import Link from 'next/Link';
 
 export default function Home() {
   return (
@@ -108,13 +109,18 @@ export default function Home() {
           <div id={styles.innerSection3}>
             <h1>El impulso hacia tu <span>transformación</span> digital</h1>
             <div className={styles.buttonsContainerSeccion3}>
-              <a href="/" id={styles.btnTransomate}>
-                Transformate
-              </a>
+              <Link href="">
+                <a id={styles.btnTransomate}>
+                  Transformate
+                </a>
+              </Link>
               <span>ó</span>
-              <a href="/" id={styles.btnContactanos}>
-                Contactanos
+              <Link href="">
+                <a id={styles.btnContactanos}>
+                  Contactanos
               </a>
+              </Link>
+
             </div>
           </div>
         </section>
