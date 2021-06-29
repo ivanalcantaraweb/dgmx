@@ -8,6 +8,8 @@
     display: flex;
     justify-content: center;
     flex-direction: row;
+    transition: ease 0.4s;
+    height: 80px;
 } 
 
 .innerNavbar{
@@ -15,6 +17,8 @@
     display: flex;
     justify-content: space-between;
     flex-direction: row;
+    transition: ease-out 0.5s;
+    padding: 0px 1.5em;
 }
 
 .containerMenu {
@@ -27,11 +31,15 @@
  display: flex;
  flex-direction: row;
  margin: 0px;
+ height: 100%;
+ justify-content: center;
+ align-items: center;
 }
 
 .containerMenu ul li{
   list-style-type: none;
   margin: 0px 1em;
+  height: 80%;
 }
 .containerMenu ul li:last-child{
    margin-right: 0px;
@@ -42,5 +50,42 @@
    }
 
 .containerMenu ul li a{
-   color: white
+   color: white;
+   height: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
   }
+  .logoContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  @media (max-width: 1200px) {
+    .innerNavbar{
+     width: 900px;
+    }
+   }
+
+   
+  @media (max-width: 900px) {
+    .innerNavbar{
+     width: 767px;
+    }
+   }
+
+      
+  @media (max-width: 767px) {
+    .containerMenu{
+     display: none;
+    }
+    .innerNavbar{
+    display: flex;
+    justify-content: center;
+     }
+     #logoPrincipal{
+       opacity: 1 !important;
+       transform: translateX(0px) !important;
+     }
+   }
