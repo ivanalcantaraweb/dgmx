@@ -90,7 +90,7 @@ export default function Home() {
 
 
   useEffect(() => {
-    // smoothScroll("#home");
+    smoothScroll("#home");
   }, [])
 
 
