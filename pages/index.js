@@ -90,8 +90,11 @@ export default function Home() {
 
 
   useEffect(() => {
-    smoothScroll("#home");
-  }, [])
+    if (width > 780) {
+      smoothScroll("#home");
+    }
+
+  }, [width])
 
 
 
