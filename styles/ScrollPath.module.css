@@ -1,0 +1,44 @@
+
+.sectionScrollPath{
+    position: relative;
+    height: 1000px;
+    width: 100%;
+    /*  display: flex;
+    justify-content: center;
+    align-items: center;
+   
+    min-height: 800px;
+   */
+}
+
+.containerSVG{
+    display: absolute;
+    top: 0px;
+}
+
+
+
+
+
+
+.sectionScrollPath svg {
+    position: absolute;
+    display: block;
+    left: 50%;
+    top:0px;
+   
+    overflow: visible;
+}
+
+.sectionScrollPath path {
+	fill: none;
+	stroke: #fff;
+	stroke-width: 2px;
+}
+
+.circle {
+    position: absolute;
+    display: block;
+    left: 50%;
+    top:0px;
+}

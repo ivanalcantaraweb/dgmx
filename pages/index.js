@@ -7,14 +7,16 @@ import Link from 'next/link';
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { useEffect, useState } from 'react'
-
+import useWindowDimensions from '../utils/getDimensions'
 import SliderCrew from '../components/sliderCrew'
+
 
 export default function Home() {
   const [box1, setBox1] = useState(false)
   const [box2, setBox2] = useState(false)
   const [box3, setBox3] = useState(false)
   const [box4, setBox4] = useState(false)
+  const { height, width } = useWindowDimensions();
 
   gsap.registerPlugin(ScrollTrigger);
 
@@ -88,7 +90,7 @@ export default function Home() {
 
 
   useEffect(() => {
-    smoothScroll("#home");
+    // smoothScroll("#home");
   }, [])
 
 
@@ -131,6 +133,17 @@ export default function Home() {
             <div id={styles.coheteSection1}>
               <Image src='/Cohete.svg' alt='next' layout='fixed' height={612} width={462} />
             </div>
+            <div id={styles.socialMediaIcons}>
+              <div id={styles.innerSocialMediaIcons}>
+                <h4>Síguenos</h4>
+                <div id={styles.containerSocialMediaIcons}>
+                  <Image src='/facebookIcon.svg' alt='next' layout='fixed' height={54} width={54} />
+                  <Image src='/instagramIcon.svg' alt='next' layout='fixed' height={54} width={54} />
+                  <Image src='/whatsappIcon.svg' alt='next' layout='fixed' height={54} width={54} />
+                  <Image src='/linkedinIcon.svg' alt='next' layout='fixed' height={54} width={54} />
+                </div>
+              </div>
+            </div>
           </section>
 
           <section className={styles.section2}>
@@ -138,7 +151,7 @@ export default function Home() {
               <div className={styles.contentSection2}>
                 <h3>Somos los arquitectos de la tecnología</h3>
                 <h2>Transformamos negocios en empresas</h2>
-                <p>Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto TextoTexto Texto Texto Texto Texto Texto Texto Texto  </p>
+
               </div>
               <div className={styles.boxesSection2}>
                 <div className={styles.innerBoxesSection2}>
@@ -169,21 +182,21 @@ export default function Home() {
                   <div className={styles.boxSection2} id={styles.box2} onMouseEnter={() => { setBox2(true) }} onMouseLeave={() => { setBox2(false) }}>
                     <div className={`${styles.box2Base}`} style={{ display: box2 ? 'none' : 'flex' }}>
                       <div className={styles.numberBox}>
-                        01
+                        02
                         </div>
                       <div className={styles.titleBox}>
-                        Automatización de procesos empresariales.
+                        Consultoría Tecnológica
                         </div>
                     </div>
                     <div className={styles.box2Active} style={{ display: box2 ? 'flex' : 'none' }}>
                       <div className={styles.numberBoxActive}>
-                        01
+                        02
                         </div>
                       <div className={styles.titleBox}>
-                        Automatización de procesos empresariales.
+                        Consultoría Tecnológica
                         </div>
                       <div className={styles.pBox}>
-                        Nos encargamos de transformar tus procesos y agilizar tu día a día
+                        Te acompañamos en el proceso de transformación asegurando las mejores decisiones
                         </div>
 
                     </div>
@@ -193,10 +206,10 @@ export default function Home() {
                   <div className={styles.boxSection3} id={styles.box3} onMouseEnter={() => { setBox3(true) }} onMouseLeave={() => { setBox3(false) }}>
                     <div className={`${styles.box3Base}`} style={{ display: box3 ? 'none' : 'flex' }}>
                       <div className={styles.numberBox}>
-                        01
+                        03
                         </div>
                       <div className={styles.titleBox}>
-                        Automatización de procesos empresariales.
+                        Branding y Digital Marketing
                         </div>
                     </div>
                     <div className={styles.box3Active} style={{ display: box3 ? 'flex' : 'none' }}>
@@ -204,10 +217,10 @@ export default function Home() {
                         03
                         </div>
                       <div className={styles.titleBox}>
-                        Automatización de procesos empresariales.
+                        Branding y Digital Marketing
                         </div>
                       <div className={styles.pBox}>
-                        Nos encargamos de transformar tus procesos y agilizar tu día a día
+                        Creamos e implementamos tu estrategia de brandketing, donde el branding y marketing se mezclan
                         </div>
 
                     </div>
@@ -220,7 +233,7 @@ export default function Home() {
                         04
                         </div>
                       <div className={styles.titleBox}>
-                        Automatización de procesos empresariales.
+                        Logística Tecnológica
                         </div>
                     </div>
                     <div className={styles.box4Active} style={{ display: box4 ? 'flex' : 'none' }}>
@@ -228,10 +241,10 @@ export default function Home() {
                         04
                         </div>
                       <div className={styles.titleBox}>
-                        Automatización de procesos empresariales.
+                        Logística Tecnológica
                         </div>
                       <div className={styles.pBox}>
-                        Nos encargamos de transformar tus procesos y agilizar tu día a día
+                        Transformamos tu cadena de suministro, implementando tecnología y eliminando los desperdicios
                         </div>
 
                     </div>
@@ -302,26 +315,18 @@ export default function Home() {
 
 
 
-
           <section className={styles.section4}>
             <div id={styles.innerSection4}>
               <div className={styles.headerSection4}>
                 <div className={styles.titleHeaderSection4}>
-                  <h3>Como te Transformamos</h3>
-                  <h2>Tu <span>transformación</span> digital</h2>
+
+                  <h2>¿Cómo te impulsamos?</h2>
                 </div>
-
-                <p>Texto TextoTextoTextoText oText oTextoText oTextoTe xtoTextoTextoTextoTex toTextoTexto Te
-                xtoTexto Texto TextoTextoTextoText oTextoTextoText oTextoTe xtoTextoTextoTextoT
-                  ex toTextoTexto TextoTexto TextoTexto</p>
+                <p>Sabemos que necesitas tecnología, pero también sabemos que puede dar miedo transformarse. Los servicios pueden ser muy complicados, muy costosos o genéricos. Nosotros te brindamos la tranquilidad para transformarte con productos tecnológicos a la medida.</p>
               </div>
-
               <div className={styles.boxesSeccion4}>
-
-                <div className={styles.itemboxSeccion4}>
+                <div className={styles.itemboxSeccion4} id={styles.section4Box1}>
                   <div className={styles.itemInnerBoxSeccion4}>
-
-
 
                     <div className={styles.iconItemBoxSeccion4}>
                       <Image src='/conocemos.png' alt='next' layout='fixed' height={95} width={95} />
@@ -329,16 +334,20 @@ export default function Home() {
                     <div className={styles.numberItemBoxSeccion4}>
                       01
                     </div>
-                    <div className={styles.tituloItemBoxSeccion4}>
-                      Te conocemos
+                    <div className={styles.containerContentBoxSeccion4}>
+                      <div className={styles.tituloItemBoxSeccion4}>
+                        Te conocemos
+                      </div>
+                      <div className={styles.textoItemBoxSeccion4}>
+                        Si no te conocemos no podemos ofrecerte lo mejor para ti. Dejanos conocer tu empresa y tus sueños, nosotros te platicaremos de DGMX y empezaremos a crear esta relación de largo plazo.
+                      </div>
                     </div>
-                    <div className={styles.textoItemBoxSeccion4}>
-                      El viaje con DGMX empieza desde el día 1. Nos ayudarás con una encuesta muy sencilla para que empecemos a conocerte.
-                    </div>
+
                   </div>
+
                 </div>
 
-                <div className={styles.itemboxSeccion4}>
+                <div className={styles.itemboxSeccion4} id={styles.section4Box2}>
                   <div className={styles.itemInnerBoxSeccion4}>
                     <div className={styles.iconItemBoxSeccion4}>
                       <Image src='/enamoramos.png' alt='next' layout='fixed' height={95} width={95} />
@@ -346,17 +355,18 @@ export default function Home() {
                     <div className={styles.numberItemBoxSeccion4}>
                       02
                     </div>
-                    <div className={styles.tituloItemBoxSeccion4}>
-                      Te enamoramos
+                    <div className={styles.containerContentBoxSeccion4}>
+                      <div className={styles.tituloItemBoxSeccion4}>
+                        Te enamoramos
+                      </div>
+                      <div className={styles.textoItemBoxSeccion4}>
+                        No queremos ni podemos ofrecerte algo de lo que no estes convencid@. Te vamos a enamorar de DGMX y de los productos que te ofrezcamos antes de proponerte una inversión.
                     </div>
-                    <div className={styles.textoItemBoxSeccion4}>
-                      El viaje con DGMX empieza desde el día 1. Nos ayudarás con una encuesta muy sencilla para que empecemos a conocerte.
-
                     </div>
                   </div>
                 </div>
 
-                <div className={styles.itemboxSeccion4}>
+                <div className={styles.itemboxSeccion4} id={styles.section4Box3}>
                   <div className={styles.itemInnerBoxSeccion4}>
                     <div className={styles.iconItemBoxSeccion4}>
                       <Image src='/reclutamos.png' alt='next' layout='fixed' height={95} width={95} />
@@ -364,17 +374,19 @@ export default function Home() {
                     <div className={styles.numberItemBoxSeccion4}>
                       03
                     </div>
-                    <div className={styles.tituloItemBoxSeccion4}>
-                      Te reclutamos
+                    <div className={styles.containerContentBoxSeccion4}>
+                      <div className={styles.tituloItemBoxSeccion4}>
+                        Te reclutamos
+                      </div>
+                      <div className={styles.textoItemBoxSeccion4}>
+                        Te vamos a ofrecer la mejor opción del mercado, con el mejor aliado tecnológico. Te reclutamos a la revolución digital y te convertimos en un Digitized, una persona que toma riesgos y ha empezado con su transformación digital.
                     </div>
-                    <div className={styles.textoItemBoxSeccion4}>
-                      El viaje con DGMX empieza desde el día 1. Nos ayudarás con una encuesta muy sencilla para que empecemos a conocerte.
 
                     </div>
                   </div>
                 </div>
 
-                <div className={styles.itemboxSeccion4}>
+                <div className={styles.itemboxSeccion4} id={styles.section4Box4}>
                   <div className={styles.itemInnerBoxSeccion4}>
                     <div className={styles.iconItemBoxSeccion4}>
                       <Image src='/bienvenida.png' alt='next' layout='fixed' height={95} width={95} />
@@ -382,17 +394,18 @@ export default function Home() {
                     <div className={styles.numberItemBoxSeccion4}>
                       04
                     </div>
-                    <div className={styles.tituloItemBoxSeccion4}>
-                      Bienvenida
+                    <div className={styles.containerContentBoxSeccion4}>
+                      <div className={styles.tituloItemBoxSeccion4}>
+                        Bienvenida
                     </div>
-                    <div className={styles.textoItemBoxSeccion4}>
-                      El viaje con DGMX empieza desde el día 1. Nos ayudarás con una encuesta muy sencilla para que empecemos a conocerte.
-
+                      <div className={styles.textoItemBoxSeccion4}>
+                        Formalicemos esta relación y empecemos a transformarte
+                    </div>
                     </div>
                   </div>
                 </div>
 
-                <div className={styles.itemboxSeccion4}>
+                <div className={styles.itemboxSeccion4} id={styles.section4Box5}>
                   <div className={styles.itemInnerBoxSeccion4}>
                     <div className={styles.iconItemBoxSeccion4}>
                       <Image src='/satisfacemos.png' alt='next' layout='fixed' height={95} width={95} />
@@ -400,17 +413,19 @@ export default function Home() {
                     <div className={styles.numberItemBoxSeccion4}>
                       05
                     </div>
-                    <div className={styles.tituloItemBoxSeccion4}>
-                      Te satisfacemos
-                    </div>
-                    <div className={styles.textoItemBoxSeccion4}>
-                      El viaje con DGMX empieza desde el día 1. Nos ayudarás con una encuesta muy sencilla para que empecemos a conocerte.
+                    <div className={styles.containerContentBoxSeccion4}>
+                      <div className={styles.tituloItemBoxSeccion4}>
+                        Te satisfacemos
+                      </div>
+                      <div className={styles.textoItemBoxSeccion4}>
+                        Esto es nuestra prioridad, te presentaremos avances periódicamente y nos aseguraremos de superar tus expectativas.
 
+                      </div>
                     </div>
                   </div>
                 </div>
 
-                <div className={styles.itemboxSeccion4}>
+                <div className={styles.itemboxSeccion4} id={styles.section4Box6}>
                   <div className={styles.itemInnerBoxSeccion4}>
                     <div className={styles.iconItemBoxSeccion4}>
                       <Image src='/aseguramos.png' alt='next' layout='fixed' height={95} width={95} />
@@ -418,17 +433,25 @@ export default function Home() {
                     <div className={styles.numberItemBoxSeccion4}>
                       06
                     </div>
-                    <div className={styles.tituloItemBoxSeccion4}>
-                      Te aseguramos
+                    <div className={styles.containerContentBoxSeccion4}>
+                      <div className={styles.tituloItemBoxSeccion4}>
+                        Te aseguramos
                     </div>
-                    <div className={styles.textoItemBoxSeccion4}>
-                      El viaje con DGMX empieza desde el día 1. Nos ayudarás con una encuesta muy sencilla para que empecemos a conocerte.
+                      <div className={styles.textoItemBoxSeccion4}>
+                        Con DGMX te aseguramos la satisfacción garantizada.
 
+                    </div>
                     </div>
                   </div>
                 </div>
-
+                <svg className={styles.fondoBoxesSeccion4} width="100%" height="2331" viewBox="0 0 1504 2331" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M286.5 46L1389.5 259L1268.5 625L257 773.5L146 1205L1077 1427.5L1182 1226L1448.5 1571L1422.5 2021L404.5 2218L362 2240" stroke="#33E0F8" stroke-width="3" />
+                  <path d="M345.066 14.8687L1423.92 328L1269.91 681.379L249.056 736.609L99.0009 1156.13L1005.71 1462.97L1128.72 1271.93L1362.5 1639.89L1295.4 2085.62L263.631 2188.55L418.5 2248" stroke="#872BFA" stroke-width="3" />
+                </svg>
               </div>
+
+
+
             </div>
           </section>
 
@@ -446,13 +469,14 @@ export default function Home() {
                   <div className={styles.itemInnerCeoCrew} id={styles.crewJean}>
                     <div>
                       <div className={styles.cargoItemCeoCrew}>
-                        CEO
+                        Technical Lead
                         </div>
                       <div className={styles.nombreItemCeoCrew}>
-                        Jean Padilla
+                        Jean Padilla Palencia
                         </div>
                       <div className={styles.descripcionItemCeoCrew}>
-                        Apasionado por la tecnología y siempre aprendiendo lo más nuevo, implementación en más de +15 proyectos de tecnologíca en empresa transnacional, con ahorros a nivel nacional.
+                        “Cuando no estoy pensando en tecnología, la estoy soñando"
+
                         </div>
                     </div>
                   </div>
@@ -463,13 +487,13 @@ export default function Home() {
                   <div className={styles.itemInnerCeoCrew} id={styles.crewJose}>
                     <div>
                       <div className={styles.cargoItemCeoCrew}>
-                        Vicepresiedente
+                        Creativity and Commercialization Lead
                         </div>
                       <div className={styles.nombreItemCeoCrew}>
-                        José Villanueva
+                        José Ramón Villanueva Puente
                         </div>
                       <div className={styles.descripcionItemCeoCrew}>
-                        Creativo y apasiona do por la mejora continua, certificado en Lean Six Sigma – Green Belt, liderando +40 proyectos de productividad simultáneamente con resultados por +$2,000,000.00 USD
+                        Una tacita de café y las ideas salen solas
                         </div>
                     </div>
                   </div>
@@ -481,13 +505,13 @@ export default function Home() {
                   <div className={styles.itemInnerCeoCrew} id={styles.crewFilemon}>
                     <div>
                       <div className={styles.cargoItemCeoCrew}>
-                        Director creativo
+                        Financial Lead and Customer Service
                         </div>
                       <div className={styles.nombreItemCeoCrew}>
-                        Filemón Garza
+                        Filemón Luis Garza Blanco
                         </div>
                       <div className={styles.descripcionItemCeoCrew}>
-                        Fiel creyente en que el servicio al cliente es vital para una buena relación de negocios. Experiencia en la Banca. Corporativa gestionando proyectos para clientes multinacionales.
+                        Siempre da más de lo que esperan de ti
                         </div>
                     </div>
                   </div>
@@ -502,6 +526,10 @@ export default function Home() {
               </h1>
                 <SliderCrew></SliderCrew>
               </div>
+
+
+
+
 
 
             </div>
@@ -528,13 +556,13 @@ export default function Home() {
             <div id={styles.innerSection7}>
               <h1>El impulso hacia tu <span>transformación</span> digital</h1>
               <div className={styles.buttonsContainerSeccion3}>
-                <Link href="">
+                <Link href="https://forms.office.com/r/27Pp0wdHnq">
                   <a id={styles.btnTransomate}>
-                    Transformate
+                    Transfórmate
                 </a>
                 </Link>
                 <span>ó</span>
-                <Link href="">
+                <Link href="https://wa.me/5215583684298?text=Hola!%20Me%20gustar%C3%ADa%20transformar%20mi%20negocio.">
                   <a id={styles.btnContactanos}>
                     Contactanos
               </a>

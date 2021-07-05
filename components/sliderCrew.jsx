@@ -1,16 +1,13 @@
-// import Swiper core and required modules
-import SwiperCore, { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
 
+import SwiperCore, { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
-// Import Swiper styles
 import 'swiper/swiper.min.css';
 import 'swiper/components/navigation/navigation.min.css';
 import 'swiper/components/pagination/pagination.min.css';
 import 'swiper/components/scrollbar/scrollbar.min.css';
 import styles from '../styles/Crew.module.css'
 
-// install Swiper modules
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
 
 const SliderCrew = () => {
@@ -46,10 +43,10 @@ const SliderCrew = () => {
                 <div className={styles.containerItemCrew}>
                     <div className={styles.innerItemCrew} id={styles.crew1}>
                         <div className={styles.cargoItemCrew}>
-                            Director creativo
+                            Digitalent
                         </div>
                         <div className={styles.nombreItemCrew}>
-                            Filemón Garza
+                            Angelica
                         </div>
                     </div>
                 </div>
@@ -58,10 +55,10 @@ const SliderCrew = () => {
                 <div className={styles.containerItemCrew}>
                     <div className={styles.innerItemCrew} id={styles.crew2}>
                         <div className={styles.cargoItemCrew}>
-                            Director creativo
+                            Digitalent
                         </div>
                         <div className={styles.nombreItemCrew}>
-                            Filemón Garza
+                            Daniel
                         </div>
                     </div>
                 </div>
@@ -71,10 +68,10 @@ const SliderCrew = () => {
                 <div className={styles.containerItemCrew}>
                     <div className={styles.innerItemCrew} id={styles.crew3}>
                         <div className={styles.cargoItemCrew}>
-                            Director creativo
+                            Digitalent
                         </div>
                         <div className={styles.nombreItemCrew}>
-                            Filemón Garza
+                            Francisco
                         </div>
                     </div>
                 </div>
@@ -84,10 +81,10 @@ const SliderCrew = () => {
                 <div className={styles.containerItemCrew}>
                     <div className={styles.innerItemCrew} id={styles.crew4}>
                         <div className={styles.cargoItemCrew}>
-                            Director creativo
+                            Digitalent
                         </div>
                         <div className={styles.nombreItemCrew}>
-                            Filemón Garza
+                            Emilio
                         </div>
                     </div>
                 </div>
@@ -97,10 +94,10 @@ const SliderCrew = () => {
                 <div className={styles.containerItemCrew}>
                     <div className={styles.innerItemCrew} id={styles.crew5}>
                         <div className={styles.cargoItemCrew}>
-                            Director creativo
+                            Digitalent
                         </div>
                         <div className={styles.nombreItemCrew}>
-                            Filemón Garza
+                            Pablo
                         </div>
                     </div>
                 </div>
@@ -109,10 +106,22 @@ const SliderCrew = () => {
                 <div className={styles.containerItemCrew}>
                     <div className={styles.innerItemCrew} id={styles.crew6}>
                         <div className={styles.cargoItemCrew}>
-                            Director creativo
+                            Digitalent
                         </div>
                         <div className={styles.nombreItemCrew}>
-                            Filemón Garza
+                            Andrea
+                        </div>
+                    </div>
+                </div>
+            </SwiperSlide>
+            <SwiperSlide>
+                <div className={styles.containerItemCrew}>
+                    <div className={styles.innerItemCrew} id={styles.crew7}>
+                        <div className={styles.cargoItemCrew}>
+                            Digitalent
+                        </div>
+                        <div className={styles.nombreItemCrew}>
+                            Daniel
                         </div>
                     </div>
                 </div>

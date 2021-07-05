@@ -43,6 +43,15 @@ h3{
   text-transform: uppercase;
 }
 
+h4{
+  color:#ececec;
+  font-family: Maax;
+  font-size: 1.2em;
+  text-align: left;
+  font-weight: 700;
+ 
+}
+
 p{
   color: #DDCDFF;
 }
@@ -80,5 +89,7 @@ h2, h1{
   font-size: 2em !important;
 }
 }
+
+
 
 

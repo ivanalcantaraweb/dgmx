@@ -13,51 +13,65 @@ height: 100%;
 width: 100%;
 }
 
-#crew1,#crew2, #crew3, #crew4, #crew5 ,#crew6{
+#crew1,#crew2, #crew3, #crew4, #crew5 ,#crew6, #crew7{
     width: 100%;
     height: 400px;
     background-size: cover;
     color: white;
     padding: 20px;
     display: flex;
-    align-items: flex-end;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: flex-end;
+    background-position: center;
 }
 
 #crew1{
     background-image:
     linear-gradient(to bottom, rgba(135, 75, 246, 0), rgba(22, 2, 88, 0.73)),
-    url('../public/5.jpeg');
+    url('../public/DigitalentAngelica.jpeg');
 }
 
 #crew2{
     background-image:
     linear-gradient(to bottom, rgba(135, 75, 246, 0), rgba(22, 2, 88, 0.73)),
-    url('../public/6.jpeg');
+    url('../public/DigitalentDani.jpeg');
 }
 #crew3{
     background-image:
     linear-gradient(to bottom, rgba(135, 75, 246, 0), rgba(22, 2, 88, 0.73)),
-    url('../public/7.jpeg');
+    url('../public/DigitalentFran.jpeg');
 }
 #crew4{
     background-image:
     linear-gradient(to bottom, rgba(135, 75, 246, 0), rgba(22, 2, 88, 0.73)),
-    url('../public/8.jpeg');
+    url('../public/DigitalentEmilio.jpeg');
 }
 #crew5{
     background-image:
     linear-gradient(to bottom, rgba(135, 75, 246, 0), rgba(22, 2, 88, 0.73)),
-    url('../public/9.jpeg');
+    url('../public/DigitalentPablo.jpeg');
 }
 #crew6{
     background-image:
     linear-gradient(to bottom, rgba(135, 75, 246, 0), rgba(22, 2, 88, 0.73)),
-    url('../public/10.jpeg');
+    url('../public/DigitalentAndrea.jpeg');
 }
 #crew7{
     background-image:
     linear-gradient(to bottom, rgba(135, 75, 246, 0), rgba(22, 2, 88, 0.73)),
-    url('../public/11.jpeg');
+    url('../public/DigitalentDaniel.jpeg');
+}
+
+.cargoItemCrew{
+    font-family: Maax;
+font-size: 1em;
+color: #d2b2f0;
+margin-bottom: 0.7em;
+}
+.nombreItemCrew{
+    font-family: Maax-RegularMono;
+    font-size: 1.2em;
 }
 
 
